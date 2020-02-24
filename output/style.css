@@ -1,0 +1,99 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* tek út sjálgefið 10px margin */
+  /* font-family: ;*/
+  font: 400 1em/1.5, "Gothic A1" sans-serif;
+  /* samsett skipun: weight/height, size, family */
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.color {
+  background: bisque;
+}
+
+.button {
+  background: indigo;
+}
+
+.mybutton {
+  background: red;
+}
+
+img {
+  max-width: 20em;
+  height: auto;
+}
+
+.card {
+  border-radius: .2em;
+  border: 1px solid bisque;
+  overflow: hidden;
+  text-align: left;
+  background: beige;
+  margin-bottom: .6em;
+  padding: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font: 400 1em/1.5, "Gothic A1" sans-serif;
+}
+
+.three {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.bgcolor3 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#092769), to(#08a3ca));
+  background: linear-gradient(to top, #092769, #08a3ca);
+  padding: 1em;
+  text-align: center;
+}
+
+.marginheader {
+  margin-top: -3em;
+  border-radius: 10px;
+  margin-right: -12em;
+  margin-left: -12em;
+}
+
+.marginfooter {
+  margin-bottom: -3em;
+  border-radius: 10px;
+  margin-right: -12em;
+  margin-left: -12em;
+}
+
+/*------------48em---------*/
+@media screen and (min-width: 48em) {
+  .three {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+/*------------60em-----------*/
+@media screen and (min-width: 60em) {
+  .three {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */

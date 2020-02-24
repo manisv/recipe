@@ -2,8 +2,9 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-<h1>My Recipes</h1>
+<header class="bgcolor3 marginheader">
+    <h1>My Recipes</h1>
+</header>
 
 <div class="flex three demo">
 
@@ -11,8 +12,8 @@
 
     <div>
 
-        <article class="card">
-            <header>
+        <article class="card color">
+            <header class="margin">
                 <img src="{{ post.thumbnail }}">
             </header>
             <footer>
@@ -42,5 +43,7 @@
 {% endfor %}
 
 </div>
+<footer class="bgcolor3 marginfooter">
 
+</footer>
 {% endblock %}
