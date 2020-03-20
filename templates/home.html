@@ -2,21 +2,34 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<header class="bgcolor3 marginheader">
-    <h1>My Recipes</h1>
+<header class="headcol-2">
+    <div>
+        <a href="https://vefhonnun.github.io/myrecipes/index.html">
+            <img src="img/my-recipes.svg">
+        </a>
+    </div>
+    <nav class="topnav">
+        <ul class="topmenu">
+            <li><a href="../index.html" class="virkur"><span class="icon-drawing2"></span> Bread</a></li>
+            <li><a href="#"><span class="icon-drawing"></span> Cocktails</a></li>
+            <li><a href="#"><span class="icon-drawing1"></span> Main Courses</a></li>
+            <li><a href="#"> <span class="icon-drawing4"></span> Desserts</a></li>
+            <li><a href="#"><span class="icon-drawing3"></span> Drinks</a></li>
+        </ul>
+    </nav>
 </header>
 
-<div class="flex three demo">
+<main class="flex three demo">
 
 {% for post in posts %}
 
-    <div>
+    <div class="stretch">
 
         <article class="card color">
             <header class="margin">
                 <img src="{{ post.thumbnail }}">
             </header>
-            <footer>
+            <main>
                 <h2>{{ post.title }}</h2>
                 <small>{{ post.date }}</small>
                 <p>
@@ -28,12 +41,11 @@
                 {% for tag in list_of_tags %}
                     <button class="shyButton mybutton">{{ tag }}</button>
                 {% endfor %}
-            </footer>
+            </main>
             
         </article>
 
     </div>
-
 <!-- 
     <p>
             <h2>{{loop.index}}: <a href="posts/{{ post.slug }}.html">{{post.title}}</a> <small>{{post.date}}</small></h2>
@@ -41,9 +53,29 @@
         </p> -->
 
 {% endfor %}
+</main>
 
+<div class="sMedia">
+    <div class="twitter">
+        <a href="https://twitter.com" title="twitter">
+            <span class="icon-twitter"> </span>
+        </a> 
+    </div>
+    <div class="steam">
+        <a href="https://store.steampowered.com/" title="steam">
+            <span class="icon-steam"> </span>
+        </a> 
+    </div>
+    <div class="github">
+        <a href="https://github.com/" title="github">
+            <span class="icon-github"> </span>
+        </a> 
+    </div>
+    <div class="soundcloud">
+        <a href="https://soundcloud.com/" title="soundcloud">
+            <span class="icon-soundcloud"> </span>
+        </a> 
+    </div>
 </div>
-<footer class="bgcolor3 marginfooter">
 
-</footer>
 {% endblock %}
