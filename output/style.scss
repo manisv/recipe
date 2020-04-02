@@ -181,7 +181,45 @@ img{
     grid-area:auglysing;
     border:1px dotted;
     padding:1em;
-    text-align:center
+    text-align:center;
+    background-color: white;
+}
+
+#lineMiddle,
+#lineLeft,
+#lineRight{
+    animation: line 1s ease-in-out infinite alternate;
+}
+#Braud{
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+}
+
+@keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-1px,0);
+    }
+    50% {
+      transform: translate3d(0,1px,0);
+    }
+  }
+
+@keyframes line{
+    from{
+transform: rotatex(0deg);
+    }
+    to{
+transform: rotateX(30deg);
+    }
 }
 .card{
     border-radius:.5em;

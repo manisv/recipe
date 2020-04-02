@@ -1,0 +1,23 @@
+.auglysing {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+
+#lineMiddle,
+#lineLeft,
+#lineRight{
+    animation: line 1s ease-in-out infinite alternate;
+}
+
+@keyframes line{
+    from{
+transform: rotatex(0deg);
+    }
+    to{
+transform: rotateX(30deg);
+    }
+}
