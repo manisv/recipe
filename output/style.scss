@@ -184,6 +184,96 @@ img{
     text-align:center;
     background-color: white;
 }
+.favorite{border-collapse:collapse;
+    margin:0 0 2em 0;
+    padding:1em;width:100%;
+    }
+.favorite caption{
+    font-size:1.5em;
+    margin:.5em 0 .75em;
+    text-align: center;
+}
+.favorite tr{
+    background:#ededed;
+    border-bottom:1px solid #bbb;
+    padding:.35em
+}
+.favorite th,.favorite td{
+    padding:.625em
+}
+.favorite th{
+    font-size:.9em;letter-spacing:.1em;
+    text-transform:uppercase;
+    text-align:left
+}
+.favorite tbody tr:nth-child(odd){
+    background:#fefefe
+}
+.favorite th:first-child{
+    border-top-left-radius:.8em;
+    text-align:left
+}
+.favorite th:last-child{
+    border-top-right-radius:.8em
+}
+.favorite tfoot tr:last-child td:first-child{
+    border-bottom-left-radius:.8em
+}
+.favorite tfoot tr:last-child td:last-child{
+    border-bottom-right-radius:.8em
+}
+.favorite a{
+    text-decoration:none
+}
+.favorite a:hover{
+    text-decoration:underline
+}
+.card{
+    border-radius:.5em;
+    border:1px solid #7e7e7e;background:#fff url("../img/hot_plain_bread.svg") bottom right no-repeat;
+    -webkit-box-shadow:-5px 10px 10px #afaca8;
+    box-shadow:-5px 10px 10px #afaca8;
+    padding:1em
+}
+.reply{
+    display:block;
+    background:-webkit-gradient(linear, left top, left bottom, from(purple), color-stop(90%, purple), to(magenta));
+    background:linear-gradient(purple, magenta 90%, purple);
+    border:0;
+    color:#fff;
+    font-size:1.2em;
+    padding:.5em;
+    border-radius:.3em;text-align:center
+}
+.menuInput{
+    display:none
+}
+.menuLabel{
+    position:fixed;
+    top:0;
+    right:0;
+    width:2.5em;
+    height:1.6em;
+    color:#7e276f;
+    font-size:1.3em;
+    text-align:left;
+    padding:.5em;
+    -webkit-transition:all .4s ease;
+    transition:all .4s ease;
+    z-index:999
+}
+.menuInput:checked+.menuLabel{
+    -webkit-transform:translate(-23px, -3px) rotate(-90deg);
+    transform:translate(-23px, -3px) rotate(-90deg);
+    -webkit-transition:all .5s ease;
+    transition:all .5s ease
+}
+.menuInput:checked ~ .topmenu{
+    position:fixed;top:3em;
+    right:0;z-index:980;
+    -webkit-transition:all .5s ease;
+    transition:all .5s ease
+}
 
 #lineMiddle,
 #lineLeft,
@@ -298,6 +388,22 @@ transform: rotateX(30deg);
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
+@media screen and (max-width: 37.5em){
+    .topmenu{
+        display:block;
+        position:fixed;
+        top:3em;
+        right:-15em;
+        z-index:980;
+        padding:0;
+        margin:0;
+        list-style:none;
+        -webkit-transition:all .5s ease;
+        transition:all .5s ease;
+        background-color:rgba(255,255,255,0.8)
+    }
+}
+
 /*------------48em---------*/
 @media screen and (min-width: 48em){
     .three {
@@ -362,5 +468,30 @@ transform: rotateX(30deg);
         display:-ms-flexbox;
         list-style-type:none;
         margin:0 0 .5em 0;padding:0
+    }
+    .favorite caption{
+        font-size:1.3em
+    }
+    .favorite thead{
+        display:none
+    }
+    .favorite tr{
+        border-bottom:3px solid #ddd;
+        display:block;
+        margin-bottom:.625em
+    }
+    .favorite td{
+        border-bottom:1px solid #ddd;
+        display:block;
+        font-size:.8em;
+        text-align:right
+    }
+    .favorite td:before{
+        content:attr(data-label);
+        float:left;font-weight:bold;
+        text-transform:uppercase
+    }
+    .favorite td:last-child{
+        border-bottom:0
     }
 }

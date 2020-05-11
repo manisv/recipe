@@ -12,6 +12,8 @@
             <h4><em>With a little help from my friends</em></h4>
         </div>
         <nav class="topnav">
+            <input type="checkbox" id="toggle" class="menuInput">
+            <label for="toggle" class="menuLabel"><span class="icon-drawing2"></span></label>
             <ul class="topmenu">
                 <li><a href="output/home.html" class="virkur"><span class="icon-drawing2"></span> Bread</a></li>
                 <li><a href="#"><span class="icon-drawing"></span> Cocktails</a></li>
@@ -19,19 +21,16 @@
                 <li><a href="#"> <span class="icon-drawing4"></span> Desserts</a></li>
                 <li><a href="#"><span class="icon-drawing3"></span> Drinks</a></li>
             </ul>
+            </ul>
         </nav>
     </header>
     <main>
+        <div>
+            <a href="../index.html">
+                <img src="output/img/my-recipes.svg">
+            </a>
+        </div>
         <section class="col-3-1">
-            <div class="splashlogo">
-                <img src="output/img/my-recipes.svg" title="myrecipes lógó" width="98%">
-            </div>
-            <div class="kynning">
-                <h2>Scalable Vector Graphics. Í 4. verkefni búum við til
- nýja forsíðu á uppskriftarvefinn og notum SVG tákn í lógó og leturtákn í
- efnisyfirliti.  Til að byrja með notum við vefsíðurnar úr 3. verkefni 
-sem undirsíður og höfum aðra tengla í efnisyfirlitinu óvirka. </h2>
-            </div>
             <table class="favorite">
                 <caption>Today's favorite recipes</caption>
                 <thead>
@@ -44,22 +43,6 @@ sem undirsíður og höfum aðra tengla í efnisyfirlitinu óvirka. </h2>
                     </tr>
                 </thead>
                 <tfoot>
-                    <tr>
-                        <td></td><td></td>
-                        <td>
-                            <a href="reply.html" class="reply">Send us a Recipe</a>
-                        </td>
-                        <td colspan="2"><em>Share your favorite recipes with our hungry readers</em> </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">
-                            Taflan hér að ofan er stíluð þannig að allar upplýsingar
-             í töflunni eru sýnilegar í litlum skjáum.Það þarf ekki að hliðra til 
-            skjánum. Heimild: https://www.cssscript.com/<wbr>pure-html5-css3-responsive-table-solution/<br>
-                            "Tfoot" er hægt að setja strax á eftir "Thead". Efni 
-            "Thead" og "Tfoot" eru "static" gögn. Í "Tbody" kemur gagnvirkt efni.
-                        </td>
-                    </tr>
                 </tfoot>
                 <tbody>
                     <tr>
@@ -85,6 +68,64 @@ sem undirsíður og höfum aðra tengla í efnisyfirlitinu óvirka. </h2>
                     </tr>
                 </tbody>
             </table>
+            <div class="card">
+                <div>
+    <form action="#" method="get" class="centre">
+        <fieldset>
+            <legend>Required fields are marked *</legend>
+            <label><h3>My Recipe</h3>
+                <textarea rows="6" name="Athugasemdir" autofocus=""></textarea>
+            </label>
+            <div class="col-2">
+                <section>
+                    <label>
+                        Recipe catecory
+                        <select name="fjöldi" max-width="14em">
+                            <option value="0" selected="selected">Choose category</option>
+                            <option value="1">Bread</option>
+                            <option value="2">Starters</option>
+                            <option value="3">Main Cousres</option>
+                            <option value="4">Desserts</option>
+                            <option value="5">Drink</option>
+                        </select>
+                    </label><br>
+                    <label>
+                        Link to recipe (if available) <input type="url" name="url" placeholder="http:// or https://">
+                    </label>
+                    <br>     
+                    Rate this recipe <br>
+                    <label><input type="radio" name="rate" value="easy"> ⭐ Easy recipe</label><br> 
+                    <label><input type="radio" name="rate" value="quality"> ⭐⭐ Quality recipe</label><br> 
+                    <label><input type="radio" name="rate" value="exotic"> ⭐⭐⭐ Exotic recipe</label>                    
+                </section>
+                <section>
+                    <label>
+                        Name*
+                        <input type="text" name="nafn" placeholder="Full name" required="" title="Vinsamlegast skráið nafn"> <!--ATH! input hefur ekki lokunartag -->
+                    </label>
+                    <label>
+                        Telephone*
+                        <input type="tel" name="telephone" placeholder="123 4567" title="put only digits" required="">
+                    </label>
+                    <label>
+                        Email*
+                        <input type="email" name="email" placeholder="Valid Email @ddress" required="">
+                        </label>
+                    <label>
+                        Date of writing*  
+                        <input type="date" name="dagsetning" required="">
+                    </label>
+                </section>
+            </div>
+            <div class="col-2">
+                <p><label><input type="checkbox" name="save-me" value="saveme"> Register me to My Recipes food club</label><br> 
+                   <label><input type="checkbox" name="send-me" value="sendme"> Let me now when new recipes are published</label></p>        
+                <p><em>Your email address will not be published.</em><br>
+                    <input type="submit" name="submit" value="Send"></p>
+            </div>
+        </fieldset>
+    </form>
+</div>
             <a href="output/home.html">
             <div class="auglysing">
                 <div class="Braud">
@@ -113,13 +154,15 @@ sem undirsíður og höfum aðra tengla í efnisyfirlitinu óvirka. </h2>
                 </a>
             </div>
             <div>
-        </div></div></section>
-        <figure class="col-4">
-            <img src="output/img/bread.jpg" title="bread">
-            <img src="output/img/challah.jpg" title="starters">
-            <img src="output/img/doughnuts.jpg" title="courses">
-            <img src="output/img/cond-milk-cake.jpg" title="desserts">
-        </figure>
+        </div>
+    </div>
+</section>
+<figure class="col-4">
+    <img src="output/img/bread.jpg" title="bread">
+    <img src="output/img/challah.jpg" title="starters">
+    <img src="output/img/doughnuts.jpg" title="courses">
+    <img src="output/img/cond-milk-cake.jpg" title="desserts">
+</figure>
     </main>
     <footer><p>© 2020 MS - tölvubraut Tækniskólans</p></footer>
     <!-- Social Media Buttons -->
